@@ -59,9 +59,9 @@ public class Font {
         self.pointer = CTFontCreateWithNameAndOptions(name as CFString, size, nil, CTFontOptions(rawValue: options.rawValue))
     }
     
-    #if canImport(UIKit)
-    public convenience init(uiFont: UIFont) {
-        self.init(name: uiFont.fontName, size: uiFont.pointSize)
+    #if canImport(UIKit) || canImport(AppKit)
+    public convenience init(platformFont: PlatformFont) {
+        self.init(name: platformFont.fontName, size: platformFont.pointSize)
     }
     #endif
     
@@ -238,12 +238,12 @@ extension Font {
         
     }
     
-    #if canImport(UIKit)
-    public var uiFont: UIFont {
-        return UIFont(name: self.postScriptName, size: self.size)!
+    #if canImport(UIKit) || canImport(AppKit)
+    public var platformFont: PlatformFont {
+        return PlatformFont(name: self.postScriptName, size: self.size)!
     }
     #endif
-        
+    
 }
 
 extension Font: Equatable {
