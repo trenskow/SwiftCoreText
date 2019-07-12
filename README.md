@@ -1,3 +1,2 @@
-# SwiftCoreText
+Crudely implemented Swift wrapper for CoreText. Works, though!
 
-A description of this package.
