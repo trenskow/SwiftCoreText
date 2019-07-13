@@ -6,7 +6,7 @@
 //  Copyright © 2019 Kristian Trenskow. All rights reserved.
 //
 
-import Foundation
+import CoreGraphics
 
 public struct TypographicBounds {
     public let acsent: CGFloat
