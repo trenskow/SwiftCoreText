@@ -180,7 +180,7 @@ extension Font {
         return CTFontGetUnderlinePosition(self.pointer)
     }
     
-    public var underlineThichness: CGFloat {
+    public var underlineThickness: CGFloat {
         return CTFontGetUnderlineThickness(self.pointer)
     }
     
