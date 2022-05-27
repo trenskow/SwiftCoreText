@@ -82,7 +82,7 @@ extension Run {
         guard width > 0 else { return nil }
         
         return TypographicBounds(
-            acsent: ascent,
+            ascent: ascent,
             descent: descent,
             leading: leading,
             width: CGFloat(width))
