@@ -30,7 +30,7 @@ extension Framesetter {
         return Frame(pointer: CTFramesetterCreateFrame(self.pointer, range?.cfRange ?? .zero, path, nil))
     }
     
-    public func suggestFrame(for path: CGPath, constraints: CGSize = .max, fromRange range: Range? = nil) -> (size: CGSize, fittetRange: Range) {
+    public func suggestFrame(forConstraints constraints: CGSize = .max, fromRange range: Range? = nil) -> (size: CGSize, fittetRange: Range) {
         
         var fittedRange: CFRange = .zero
         
