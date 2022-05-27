@@ -17,6 +17,10 @@ public class Framesetter {
     public init(attributedString string: NSAttributedString) {
         self.pointer = CTFramesetterCreateWithAttributedString(string)
     }
+
+	public init(typesetter: Typesetter) {
+		self.pointer = CTFramesetterCreateWithTypesetter(typesetter.pointer)
+	}
     
 }
 
