@@ -65,8 +65,18 @@ public class Frame {
 extension Frame {
 
 	public struct FrameLine {
+
 		public let line: Line
 		public let origin: CGPoint
+
+		init(
+			line: Line,
+			origin: CGPoint
+		) {
+			self.line = line
+			self.origin = origin
+		}
+
 	}
 
 	public var stringRange: Range {

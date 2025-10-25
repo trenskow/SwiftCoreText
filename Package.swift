@@ -4,22 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftCoreText",
-    platforms: [
-        .macOS(.v10_14),
-        .iOS(.v12)
-    ],
-    products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "SwiftCoreText",
-            targets: ["SwiftCoreText"]),
-    ],
-    dependencies: [
-    ],
-    targets: [
-        .target(
-            name: "SwiftCoreText",
-            dependencies: [])
-    ]
+	name: "SwiftCoreText",
+	platforms: [
+		.macOS(.v10_14),
+		.iOS(.v12)
+	],
+	products: [
+		.library(
+			name: "SwiftCoreText",
+			targets: ["SwiftCoreText"]),
+	],
+	targets: [
+		.target(
+			name: "SwiftCoreText")
+	]
 )
