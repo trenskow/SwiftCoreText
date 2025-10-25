@@ -9,9 +9,9 @@
 import Foundation
 
 extension Dictionary {
-    static func +(lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
-        var result = lhs
-        rhs.keys.forEach { result[$0] = rhs[$0] }
-        return result
-    }
+	static func +(lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
+		var result = lhs
+		rhs.keys.forEach { result[$0] = rhs[$0] }
+		return result
+	}
 }

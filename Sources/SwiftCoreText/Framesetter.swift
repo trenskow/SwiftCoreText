@@ -11,43 +11,43 @@ import CoreText
 import CoreGraphics
 
 public class Framesetter {
-    
-    let pointer: CTFramesetter
-    
-    public init(attributedString string: NSAttributedString) {
-        self.pointer = CTFramesetterCreateWithAttributedString(string)
-    }
+
+	let pointer: CTFramesetter
+
+	public init(attributedString string: NSAttributedString) {
+		self.pointer = CTFramesetterCreateWithAttributedString(string)
+	}
 
 	public init(typesetter: Typesetter) {
 		self.pointer = CTFramesetterCreateWithTypesetter(typesetter.pointer)
 	}
-    
+
 }
 
 extension Framesetter {
-    
-    public var typesetter: Typesetter {
-        return Typesetter(pointer: CTFramesetterGetTypesetter(self.pointer))
-    }
-    
-    public func frame(for path: CGPath, range: Range? = nil) -> Frame {
-        return Frame(pointer: CTFramesetterCreateFrame(self.pointer, range?.cfRange ?? .zero, path, nil))
-    }
-    
-    public func suggestFrame(forConstraints constraints: CGSize = .max, fromRange range: Range? = nil) -> (size: CGSize, fittetRange: Range) {
-        
-        var fittedRange: CFRange = .zero
-        
-        let size = CTFramesetterSuggestFrameSizeWithConstraints(self.pointer, range?.cfRange ?? .zero, nil, constraints, &fittedRange)
-        
-        return (size, Range(cfRange: fittedRange))
-        
-    }
-    
+
+	public var typesetter: Typesetter {
+		return Typesetter(pointer: CTFramesetterGetTypesetter(self.pointer))
+	}
+
+	public func frame(for path: CGPath, range: Range? = nil) -> Frame {
+		return Frame(pointer: CTFramesetterCreateFrame(self.pointer, range?.cfRange ?? .zero, path, nil))
+	}
+
+	public func suggestFrame(forConstraints constraints: CGSize = .max, fromRange range: Range? = nil) -> (size: CGSize, fittetRange: Range) {
+
+		var fittedRange: CFRange = .zero
+
+		let size = CTFramesetterSuggestFrameSizeWithConstraints(self.pointer, range?.cfRange ?? .zero, nil, constraints, &fittedRange)
+
+		return (size, Range(cfRange: fittedRange))
+
+	}
+
 }
 
 extension Framesetter: Equatable {
-    public static func ==(lhs: Framesetter, rhs: Framesetter) -> Bool {
-        return lhs.pointer === rhs.pointer
-    }
+	public static func ==(lhs: Framesetter, rhs: Framesetter) -> Bool {
+		return lhs.pointer === rhs.pointer
+	}
 }

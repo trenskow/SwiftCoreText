@@ -9,8 +9,8 @@
 import CoreGraphics
 
 public struct TypographicBounds {
-    public let ascent: CGFloat
-    public let descent: CGFloat
-    public let leading: CGFloat
-    public let width: CGFloat
+	public let ascent: CGFloat
+	public let descent: CGFloat
+	public let leading: CGFloat
+	public let width: CGFloat
 }

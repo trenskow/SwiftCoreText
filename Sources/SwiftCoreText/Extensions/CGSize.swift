@@ -9,7 +9,7 @@
 import CoreGraphics
 
 extension CGSize {
-    public static var max: CGSize {
-        return CGSize(width: .max, height: .max)
-    }
+	public static var max: CGSize {
+		return CGSize(width: .max, height: .max)
+	}
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 extension CFRange {
-    static var zero: CFRange {
-        return CFRangeMake(0, 0)
-    }
+	static var zero: CFRange {
+		return CFRangeMake(0, 0)
+	}
 }

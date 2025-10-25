@@ -9,13 +9,13 @@
 import Foundation
 
 extension ClosedRange where Bound == Int {
-    
-    init(cfRange: CFRange) {
-        self = ClosedRange(uncheckedBounds: (cfRange.location, cfRange.location + cfRange.length))
-    }
-    
-    var cfRange: CFRange {
-        return CFRangeMake(self.lowerBound, self.upperBound - self.lowerBound)
-    }
-    
+
+	init(cfRange: CFRange) {
+		self = ClosedRange(uncheckedBounds: (cfRange.location, cfRange.location + cfRange.length))
+	}
+
+	var cfRange: CFRange {
+		return CFRangeMake(self.lowerBound, self.upperBound - self.lowerBound)
+	}
+
 }

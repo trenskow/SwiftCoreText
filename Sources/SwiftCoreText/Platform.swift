@@ -1,6 +1,6 @@
 //
 //  Platform.swift
-//  
+//
 //
 //  Created by Kristian Trenskow on 12/07/2019.
 //
