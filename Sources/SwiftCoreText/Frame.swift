@@ -69,7 +69,7 @@ extension Frame {
 		public let line: Line
 		public let origin: CGPoint
 
-		init(
+		public init(
 			line: Line,
 			origin: CGPoint
 		) {
