@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SwiftCoreText",
     platforms: [
-        .macOS(.v10_13),
+        .macOS(.v10_14),
         .iOS(.v12)
     ],
     products: [
